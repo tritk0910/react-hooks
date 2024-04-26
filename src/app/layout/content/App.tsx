@@ -1,7 +1,7 @@
 import { useState } from "react";
-
-import ToDoList from "../components/ToDoList";
-import { Theme, ThemeContext } from "../context/themeContext";
+import { Theme, ThemeContext } from "../../context/themeContext";
+import { Outlet } from "react-router-dom";
+import NavBar from "../../components/NavBar";
 
 export default function App() {
   const [theme, setTheme] = useState<Theme>("light");
@@ -13,7 +13,8 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <ToDoList />
+      <NavBar />
+      <Outlet />
     </ThemeContext.Provider>
   );
 }

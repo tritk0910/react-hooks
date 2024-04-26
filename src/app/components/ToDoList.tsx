@@ -1,6 +1,6 @@
-import { reducer } from "../layout/reducer";
-import { initialState } from "../layout/action";
-import logger from "../layout/logger";
+import { reducer } from "../context/reducer";
+import { initialState } from "../context/action";
+import logger from "../context/logger";
 import { useContext, useReducer, useRef } from "react";
 import { ThemeContext } from "../context/themeContext";
 
@@ -20,7 +20,9 @@ export default function ToDoList() {
     <>
       <button
         onClick={themeContext!.toggleTheme}
-        className="bg-black text-white px-3 py-1 rounded-md fixed right-5 top-5"
+        className={`${
+          themeContext!.theme === "light" ? "bg-blue-500" : "bg-black"
+        } text-white px-3 py-1 rounded-md fixed right-5 top-5`}
       >
         Theme
       </button>
@@ -28,7 +30,7 @@ export default function ToDoList() {
         <h1
           className={`${
             themeContext!.theme === "light" ? "text-blue-500" : "text-black"
-          } text-blue-500 font-bold text-7xl`}
+          } font-bold text-7xl`}
         >
           To do list
         </h1>
