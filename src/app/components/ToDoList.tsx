@@ -18,14 +18,6 @@ export default function ToDoList() {
 
   return (
     <>
-      <button
-        onClick={themeContext!.toggleTheme}
-        className={`${
-          themeContext!.theme === "light" ? "bg-blue-500" : "bg-black"
-        } text-white px-3 py-1 rounded-md fixed right-5 top-5`}
-      >
-        Theme
-      </button>
       <div className="flex flex-col w-screen h-screen justify-center items-center gap-5">
         <h1
           className={`${
