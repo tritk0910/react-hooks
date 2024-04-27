@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        akira: ['"Akira Expanded"', "sans-serif"],
+        main: ['"Montserrat"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
-}
-
+};

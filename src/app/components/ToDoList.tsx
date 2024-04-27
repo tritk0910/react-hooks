@@ -20,14 +20,18 @@ export default function ToDoList() {
     <>
       <div className="flex flex-col w-screen h-screen justify-center items-center gap-5">
         <h1
-          className={`${
-            themeContext!.theme === "light" ? "text-blue-500" : "text-black"
-          } font-bold text-7xl`}
+          className={`text-8xl font-akira ${
+            themeContext?.theme === "light"
+              ? "bg-gradient-to-tr from-teal-400 via-cyan-400 to-sky-400"
+              : "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+          }  bg-clip-text text-transparent`}
         >
           To do list
         </h1>
         <input
-          className="border border-blue-500 px-3 py-1 rounded-md w-80"
+          className={`border ${
+            themeContext!.theme === "light" ? "border-blue-500" : ""
+          } px-3 py-1 rounded-md w-80`}
           placeholder="Enter todo..."
           value={state.job}
           ref={inputRef}
@@ -36,14 +40,24 @@ export default function ToDoList() {
           }}
         />
         <button
-          className="bg-blue-500 text-white px-3 py-1 rounded-md"
+          className={`${
+            themeContext!.theme === "light"
+              ? "bg-gradient-to-br from-cyan-400 to-sky-400"
+              : "bg-gradient-to-br from-purple-500 to-pink-500"
+          } text-white px-3 py-1 rounded-md font-main font-bold`}
           onClick={setJob}
         >
           Add
         </button>
         <ul>
           {state.jobs.map((job: string, index: number) => (
-            <li key={index}>
+            <li
+              key={index}
+              className={`${
+                themeContext?.theme === "light" ? "text-black" : "text-white"
+              }
+              text-xl`}
+            >
               {job}{" "}
               <button
                 className="text-red-500"
