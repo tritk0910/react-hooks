@@ -19,7 +19,7 @@ export default function App() {
   useEffect(() => {
     const background = document.getElementsByTagName("BODY")[0] as HTMLElement;
     background.style.backgroundImage =
-      theme === "light" ? "none" : "url('../public/img/background.png')";
+      theme === "light" ? "none" : "url('/img/background.png')";
   }, [theme]);
 
   const items: MenuProps["items"] = [
