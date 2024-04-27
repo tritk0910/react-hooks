@@ -3,7 +3,6 @@ import { Theme, ThemeContext } from "../../context/themeContext";
 import { Outlet, Link } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import { Dropdown, MenuProps } from "antd";
-// import { items } from "../../context/menuProps";
 
 export default function App() {
   const [theme, setTheme] = useState<Theme>(
@@ -17,9 +16,10 @@ export default function App() {
   };
 
   useEffect(() => {
-    const background = document.getElementsByTagName("BODY")[0] as HTMLElement;
-    background.style.backgroundImage =
-      theme === "light" ? "none" : "url('/img/background.png')";
+    const body = document.getElementsByTagName("BODY")[0] as HTMLElement;
+    body.style.backgroundColor = theme === "light" ? "#fff" : "#000";
+    body.style.transition =
+      "background-color 0.5s ease-in-out, background-image 0.5s ease-in-out";
   }, [theme]);
 
   const items: MenuProps["items"] = [
@@ -40,24 +40,31 @@ export default function App() {
       key: "2",
     },
     {
-      label: "3rd menu item",
+      label: <Link to={"/count"}>Click to count (useLayoutEffect)</Link>,
       key: "3",
     },
   ];
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <NavBar />
-      <Dropdown menu={{ items }} trigger={["contextMenu"]}>
+      <div className="relative">
+        <NavBar />
+        <Dropdown menu={{ items }} trigger={["contextMenu"]}>
+          <div
+            className="h-[400]"
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <Outlet />
+          </div>
+        </Dropdown>
         <div
-          className="h-[400]"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
-        >
-          <Outlet />
-        </div>
-      </Dropdown>
+          className={`${
+            theme === "light" ? "opacity-0" : "opacity-100"
+          } transition-opacity duration-500 bg-home-background z-[-1] absolute top-0 left-0 h-screen w-screen`}
+        />
+      </div>
     </ThemeContext.Provider>
   );
 }

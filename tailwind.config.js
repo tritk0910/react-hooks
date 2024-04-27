@@ -7,6 +7,9 @@ export default {
         akira: ['"Akira Expanded"', "sans-serif"],
         main: ['"Montserrat"', "sans-serif"],
       },
+      backgroundImage: {
+        "home-background": "url('/img/background.png')",
+      },
     },
   },
   plugins: [],

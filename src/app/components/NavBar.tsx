@@ -8,7 +8,7 @@ export default function NavBar() {
 
   return (
     <div
-      className={`fixed h-20 bg-gradient-to-r ${
+      className={`z-10 fixed h-20 bg-gradient-to-r ${
         themeContext?.theme === "light"
           ? "from-teal-400 via-cyan-400 to-sky-400"
           : "from-blue-500 via-purple-500 to-pink-500"

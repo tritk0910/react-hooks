@@ -24,7 +24,7 @@ export default function ToDoList() {
             themeContext?.theme === "light"
               ? "bg-gradient-to-tr from-teal-400 via-cyan-400 to-sky-400"
               : "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-          }  bg-clip-text text-transparent`}
+          }  bg-clip-text text-transparent color-transition`}
         >
           To do list
         </h1>
@@ -53,7 +53,7 @@ export default function ToDoList() {
           {state.jobs.map((job: string, index: number) => (
             <li
               key={index}
-              className={`${
+              className={`color-transition ${
                 themeContext?.theme === "light" ? "text-black" : "text-white"
               }
               text-xl`}

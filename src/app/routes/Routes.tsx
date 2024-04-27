@@ -3,6 +3,7 @@ import App from "../layout/content/App";
 import ToDoList from "../components/ToDoList";
 import HomePage from "../layout/home/HomePage";
 import Video from "../layout/video/Video";
+import Count from "../components/Count";
 
 const routes: RouteObject[] = [
   {
@@ -12,6 +13,7 @@ const routes: RouteObject[] = [
       { path: "", element: <HomePage /> },
       { path: "todolist", element: <ToDoList /> },
       { path: "video", element: <Video /> },
+      { path: "count", element: <Count /> },
     ],
   },
 ];
