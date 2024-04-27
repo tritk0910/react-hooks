@@ -62,7 +62,7 @@ export default function App() {
         <div
           className={`${
             theme === "light" ? "opacity-0" : "opacity-100"
-          } transition-opacity duration-500 bg-home-background z-[-1] absolute top-0 left-0 h-screen w-screen`}
+          } transition-opacity duration-500 bg-home-background bg-[length:100%_100%] z-[-1] absolute top-0 left-0 h-screen w-screen`}
         />
       </div>
     </ThemeContext.Provider>
