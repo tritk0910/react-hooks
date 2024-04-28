@@ -10,28 +10,26 @@ export type VideoHandler = {
 export default forwardRef<VideoHandler>(function VideoDisplayer(_props, ref) {
   const videoDisplayerRef = useRef<HTMLVideoElement>(null);
 
-  useImperativeHandle(
-    ref,
-    () => {
-      return {
-        play() {
-          videoDisplayerRef.current!.play();
-        },
-        pause() {
-          videoDisplayerRef.current!.pause();
-        },
-        toggleLoop(isLoop: boolean) {
-          videoDisplayerRef.current!.loop = isLoop;
-        },
-        toggleMuted(isMuted: boolean) {
-          videoDisplayerRef.current!.muted = !isMuted;
-        },
-      };
-    }
-  );
+  useImperativeHandle(ref, () => {
+    return {
+      play() {
+        videoDisplayerRef.current!.play();
+      },
+      pause() {
+        videoDisplayerRef.current!.pause();
+      },
+      toggleLoop(isLoop: boolean) {
+        videoDisplayerRef.current!.loop = isLoop;
+      },
+      toggleMuted(isMuted: boolean) {
+        videoDisplayerRef.current!.muted = !isMuted;
+      },
+    };
+  });
 
   return (
     <video
+      className="rounded-md"
       src={"./video/music-vid.mp4"}
       width={750}
       loop

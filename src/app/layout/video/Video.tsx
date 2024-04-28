@@ -40,22 +40,24 @@ export default function Video() {
       >
         [MIXTAPE01N] 019VOVONG - CZS KEJO x CZS SOLSILVA [OFFICIAL VIDEO]
       </span>
-      <VideoDisplayer ref={videoRef} />
-      <Space>
-        {playToggle ? (
-          <Button onClick={handlePauseVideo} type="primary">
-            Pause
+      <div className="relative">
+        <VideoDisplayer ref={videoRef} />
+        <Space className="absolute opacity-0 hover:opacity-100 color-transition h-full w-full flex justify-center items-end bottom-2">
+          {playToggle ? (
+            <Button onClick={handlePauseVideo} type="primary">
+              Pause
+            </Button>
+          ) : (
+            <Button onClick={handlePlayVideo}>Play</Button>
+          )}
+          <Button onClick={handleLoop} type={isLoop ? "primary" : "default"}>
+            Loop
           </Button>
-        ) : (
-          <Button onClick={handlePlayVideo}>Play</Button>
-        )}
-        <Button onClick={handleLoop} type={isLoop ? "primary" : "default"}>
-          Loop
-        </Button>
-        <Button onClick={handleMute} type={isMuted ? "primary" : "default"}>
-          Mute
-        </Button>
-      </Space>
+          <Button onClick={handleMute} type={isMuted ? "primary" : "default"}>
+            Mute
+          </Button>
+        </Space>
+      </div>
     </div>
   );
 }
