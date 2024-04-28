@@ -1,7 +1,6 @@
 import { Button, Space } from "antd";
 import VideoDisplayer from "../../components/VideoDisplayer";
-import { useContext, useRef, useState, ComponentRef } from "react";
-import { ThemeContext } from "../../context/themeContext";
+import { useRef, useState, ComponentRef } from "react";
 
 export default function Video() {
   const [playToggle, setPlayToggle] = useState<boolean>(false);
@@ -29,14 +28,10 @@ export default function Video() {
     videoRef.current!.toggleMuted(isMuted);
   }
 
-  const theme = useContext(ThemeContext);
-
   return (
     <div className="flex flex-col h-screen justify-center items-center gap-5">
       <span
-        className={`${
-          theme?.theme === "light" ? "" : "text-white"
-        } font-main font-semibold text-2xl color-transition`}
+        className="dark:text-white font-main font-semibold text-2xl color-transition"
       >
         [MIXTAPE01N] 019VOVONG - CZS KEJO x CZS SOLSILVA [OFFICIAL VIDEO]
       </span>
