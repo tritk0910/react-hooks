@@ -5,6 +5,7 @@ export type VideoHandler = {
   pause: () => void;
   toggleLoop: (isLoop: boolean) => void;
   toggleMuted: (isMuted: boolean) => void;
+  setVolume: (volume: number) => void;
 };
 
 export default forwardRef<VideoHandler>(function VideoDisplayer(_props, ref) {
@@ -24,6 +25,9 @@ export default forwardRef<VideoHandler>(function VideoDisplayer(_props, ref) {
       toggleMuted(isMuted: boolean) {
         videoDisplayerRef.current!.muted = !isMuted;
       },
+      setVolume(volume: number) {
+        videoDisplayerRef.current!.volume = volume;
+      }
     };
   });
 

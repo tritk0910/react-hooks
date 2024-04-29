@@ -1,4 +1,4 @@
-import { Button, Space } from "antd";
+import { Button, Slider, Space } from "antd";
 import VideoDisplayer from "../../components/VideoDisplayer";
 import { useRef, useState, ComponentRef } from "react";
 
@@ -28,11 +28,13 @@ export default function Video() {
     videoRef.current!.toggleMuted(isMuted);
   }
 
+  function onChangeComplete(value: number | number[]) {
+    videoRef.current!.setVolume(value as number);
+  }
+
   return (
     <div className="flex flex-col h-screen justify-center items-center gap-5">
-      <span
-        className="dark:text-white font-main font-semibold text-2xl color-transition"
-      >
+      <span className="dark:text-white font-main font-semibold text-2xl color-transition">
         [MIXTAPE01N] 019VOVONG - CZS KEJO x CZS SOLSILVA [OFFICIAL VIDEO]
       </span>
       <div className="relative">
@@ -51,6 +53,17 @@ export default function Video() {
           <Button onClick={handleMute} type={isMuted ? "primary" : "default"}>
             Mute
           </Button>
+          <div className="h-20 absolute flex bottom-3 right-2">
+            <Slider
+              vertical
+              defaultValue={1}
+              min={0}
+              step={0.01}
+              max={1}
+              tooltip={{ open: false }}
+              onChange={onChangeComplete}
+            />
+          </div>
         </Space>
       </div>
     </div>
