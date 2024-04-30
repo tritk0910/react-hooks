@@ -38,7 +38,7 @@ export default function App() {
       key: "4",
     },
     {
-      label: <Link to={"/css"}>A blank page to test CSS</Link>,
+      label: <Link to={"/landingPage"}>A blank page to test CSS</Link>,
       key: "5",
     },
   ];
