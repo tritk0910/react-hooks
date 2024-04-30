@@ -4,6 +4,7 @@ import ToDoList from "../components/ToDoList";
 import HomePage from "../layout/home/HomePage";
 import Video from "../layout/video/Video";
 import Count from "../components/Count";
+import LandingPage from "../components/LandingPage";
 
 const routes: RouteObject[] = [
   {
@@ -14,6 +15,7 @@ const routes: RouteObject[] = [
       { path: "todolist", element: <ToDoList /> },
       { path: "video", element: <Video /> },
       { path: "count", element: <Count /> },
+      { path: "landingPage", element: <LandingPage /> },
     ],
   },
 ];
