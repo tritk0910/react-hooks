@@ -11,17 +11,17 @@ export default function LandingPage() {
           <div className="rate-it flex font-main font-bold gap-1">
             <div className="relative w-8">
               <img
-                src="public/img/Star.svg"
+                src="/img/Star.svg"
                 alt=""
                 className="absolute top-1 left-2"
               />
               <img
-                src="public/img/Vector.svg"
+                src="/img/Vector.svg"
                 alt=""
                 className="absolute z-[-1]"
               />
               <img
-                src="public/img/Vector-1.svg"
+                src="/img/Vector-1.svg"
                 alt=""
                 className="absolute right-0 bottom-[3px]"
               />

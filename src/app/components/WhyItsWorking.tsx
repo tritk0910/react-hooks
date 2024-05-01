@@ -23,16 +23,16 @@ export default function WhyItsWorking() {
       </div>
       <div className="image flex relative w-full h-[369px] justify-center items-center">
         <img
-          src="public/img/image1.svg"
+          src="/img/image1.svg"
           alt=""
           className="absolute -z-1 left-0"
         />
         <img
-          src="public/img/image3.svg"
+          src="/img/image3.svg"
           alt=""
           className="absolute -z-1 right-0"
         />
-        <img src="public/img/image2.svg" alt="" className="absolute z-1" />
+        <img src="/img/image2.svg" alt="" className="absolute z-1" />
       </div>
       <div className="flex gap-2">
         <hr className="w-[58px] border-[#F0F0F0] border-2 rounded-full" />
@@ -43,7 +43,7 @@ export default function WhyItsWorking() {
       </div>
       <div className="flex flex-col text-center">
         <span className="opacity-35">
-          Feeling like there aren’t enough hours in the day is a common problem
+          Feeling like there aren't enough hours in the day is a common problem
           faced by many leaders in this world.
         </span>
         <span className="opacity-75 font-semibold">
