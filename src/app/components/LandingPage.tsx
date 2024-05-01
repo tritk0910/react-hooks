@@ -6,7 +6,7 @@ import WhyItsWorking from "./WhyItsWorking";
 export default function LandingPage() {
   return (
     <>
-      <div className="navbar w-screen py-[56px] px-[90px]">
+      <div className="navbar py-[56px] px-[90px]">
         <div className="flex gap-5 justify-between items-center">
           <div className="rate-it flex font-main font-bold gap-1">
             <div className="relative w-8">
@@ -15,11 +15,7 @@ export default function LandingPage() {
                 alt=""
                 className="absolute top-1 left-2"
               />
-              <img
-                src="/img/Vector.svg"
-                alt=""
-                className="absolute z-[-1]"
-              />
+              <img src="/img/Vector.svg" alt="" className="absolute z-[-1]" />
               <img
                 src="/img/Vector-1.svg"
                 alt=""
