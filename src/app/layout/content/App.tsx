@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar";
 import { Dropdown, MenuProps } from "antd";
 import { useState } from "react";
 import { MoonOutlined, SunOutlined } from "@ant-design/icons";
+import { useLocation } from "react-router-dom";
 import { ThemeContext } from "../../context/themeContext";
 
 export default function App() {
@@ -10,6 +11,9 @@ export default function App() {
   const [darkMode, setDarkMode] = useState<boolean>(
     JSON.parse(localStorageTheme || "false") || false
   );
+
+  const location = useLocation();
+  const pathname = location.pathname;
 
   const toggleDarkMode = () => {
     localStorage.setItem("darkMode", JSON.stringify(!darkMode));
@@ -53,7 +57,7 @@ export default function App() {
               e.preventDefault();
             }}
           >
-            {/* <NavBar /> */}
+            {pathname !== "/landingPage" && <NavBar />}
             <Outlet />
           </div>
         </Dropdown>

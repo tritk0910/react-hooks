@@ -7,6 +7,7 @@ import Banner from "./Banner";
 import AboutUs from "./AboutUs";
 import MessageForm from "./MessageForm";
 import Footer from "./Footer";
+import { FloatButton } from "antd";
 
 export default function LandingPage() {
   return (
@@ -20,6 +21,7 @@ export default function LandingPage() {
       <AboutUs />
       <MessageForm />
       <Footer />
+      <FloatButton.BackTop />
     </>
   );
 }
