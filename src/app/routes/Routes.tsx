@@ -4,7 +4,7 @@ import ToDoList from "../components/ToDoList";
 import HomePage from "../layout/home/HomePage";
 import Video from "../layout/video/Video";
 import Count from "../components/Count";
-import LandingPage from "../components/LandingPage";
+import LandingPage from "../../landingPage/LandingPage";
 
 const routes: RouteObject[] = [
   {

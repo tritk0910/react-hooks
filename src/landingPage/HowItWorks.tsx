@@ -1,6 +1,6 @@
 export default function HowItWorks() {
   return (
-    <div className="how-it-works flex flex-col justify-center items-center gap-10 py-[150px]">
+    <div className="how-it-works flex flex-col justify-center items-center gap-10 my-[150px]">
       <h1 className=" font-bold text-[48px]">How it works?</h1>
       <hr className="w-[58px] border-[#1F64FF] border-2 rounded-full" />
       <div className="grid grid-cols-3 gap-28">

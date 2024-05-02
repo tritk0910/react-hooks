@@ -1,25 +1,15 @@
-import { Button, Space } from "antd";
-import Landing from "./Landing";
-import HowItWorks from "./HowItWorks";
-import WhyItsWorking from "./WhyItsWorking";
+import { Button, Space } from 'antd'
 
-export default function LandingPage() {
+export default function NavBar() {
   return (
-    <>
-      <div className="navbar py-[56px] px-[90px]">
+    <div className="navbar py-[56px] px-[90px]">
         <div className="flex gap-5 justify-between items-center">
           <div className="rate-it flex font-main font-bold gap-1">
-            <div className="relative w-8">
+            <div className="w-8">
               <img
-                src="/img/Star.svg"
+                src="/img/logo.svg"
                 alt=""
-                className="absolute top-1 left-2"
-              />
-              <img src="/img/Vector.svg" alt="" className="absolute z-[-1]" />
-              <img
-                src="/img/Vector-1.svg"
-                alt=""
-                className="absolute right-0 bottom-[3px]"
+                className=""
               />
             </div>
             <span className="text-xl">Rate it</span>
@@ -43,9 +33,5 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <Landing />
-      <HowItWorks />
-      <WhyItsWorking />
-    </>
-  );
+  )
 }

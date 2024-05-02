@@ -2,7 +2,7 @@ import { Button, Space } from "antd";
 
 export default function Landing() {
   return (
-    <div className="flex px-72 justify-between items-center">
+    <div className="flex mx-72 justify-between items-center">
       <div className="flex flex-col font-main gap-3">
         <h1 className="text-[48px]">
           Stop wasting time <h1 className="font-bold">in meetings</h1>

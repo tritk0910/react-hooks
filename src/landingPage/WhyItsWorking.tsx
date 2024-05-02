@@ -2,8 +2,8 @@ import { Button } from "antd";
 
 export default function WhyItsWorking() {
   return (
-    <div className="why-its-important flex flex-col justify-center items-center mx-96 gap-5 font-main">
-      <h1 className=" font-bold text-[48px]">Why it's important?</h1>
+    <div className="why-its-important flex flex-col justify-center items-center mx-96 mb-[150px] gap-5 font-main">
+      <h1 className="font-bold text-[48px]">Why it's important?</h1>
       <hr className="w-[58px] border-[#1F64FF] border-2 rounded-full" />
       <div className=" flex flex-col justify-center items-center">
         <span className="opacity-35">

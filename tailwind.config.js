@@ -10,6 +10,10 @@ export default {
       backgroundImage: {
         "home-background": "url('/img/background.png')",
       },
+      listStyleImage: {
+        checkmark: "url('/img/checkmark.svg')",
+        ellipse: "url('/img/ellipse.svg')",
+      },
     },
   },
   darkMode: "class",
